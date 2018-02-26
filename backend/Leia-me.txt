@@ -1,0 +1,36 @@
+
+Backend
+
+========================================================================================================================================
+1 - Gerar o banco conforme o script de criação dentro da pasta database
+2 - Executar o comando npm install em seguida o comando node server.js
+
+Com isso o backend estará pronto para criar o token de autenticação de rotas no :
+
+localhost ou ip :8080/api/Authenticate 
+
+enviando no body os parametros username e password que devem constar na tabela 001t_apiauth
+ele deverá retornar o token a ser enviado sempre no header das chamadas das rotas.
+
+tendo isso configurado , encerra a configuração inicial do backend.
+
+========================================================================================================================================
+
+Ionic
+
+========================================================================================================================================
+
+• Na tela de Signup dentro do typescript foi incluido o localstorage dos dados RES que estão vindo da API do facebook quando autenticado
+quando definida a tela de complemento os mesmos deverão ser enviados por parametro para a tela de complemento , e ao final do cadastro 
+tudo deverá ser encaminhado para a API do node na rota /Usuario/Cadastro onde estará aguardando o recebimento de todos os dados para
+gerar o ID na tabela de login e na tabela de dados usuário o restante das informações a serem coletadas.
+
+• Depois disso no momento de login ainda iremos implementar a função que retornará os dados do usuário vindos do mysql quando o mesmo fazer
+o login por facebook ,google ou twitter , através do nome completo e id de usuário da tabela login.
+
+• Como um bonus será implementada a encriptação da foto em base64 e o armazenamento da mesma no banco para quando acessar ele apenas 
+recuperar o string e renderizar a imagem.
+
+O provider DataOps realiza as operações com as rotas , então é necessário apenas chamar a função passando os dados.
+
+========================================================================================================================================
